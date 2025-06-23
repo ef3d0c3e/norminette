@@ -50,7 +50,7 @@ INT_LITERAL_PATTERN = re.compile(r"""
 ^
 # (?P<Sign>[-+]*)
 (?P<Prefix>         # prefix can be
-    0[bBxX]*        #   0, 0b, 0B, 0x, 0X, 0bb, 0BB, ...
+    0(b+|B+|x+|X+)? #   0, 0b, 0B, 0x, 0X, 0bb, 0BB, ...
     |               # or empty
 )
 (?P<Constant>
